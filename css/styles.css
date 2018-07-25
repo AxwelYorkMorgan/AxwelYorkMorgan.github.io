@@ -130,3 +130,31 @@ a.link-container-text:hover {
     opacity: 0.8;
     position: absolute;
 }
+
+@media screen and (max-width: 1300px) {
+    body {
+        background-size: cover;
+    }
+    .large-label {
+        font-size: 74pt;
+        margin-top: 25%;
+    }
+    .btn {
+        display: none;
+        transform: scale(2);
+        margin-left: 2%;
+    }
+    span.link-container-sp {
+        font-size: 12pt;
+    }
+    a.link-container-text {
+        font-size: 20pt;
+    }
+    .wp-element {
+        font-size: 40pt;
+        bottom: 30%;
+    }
+    #backshape .wrapper {
+        margin: 1000px auto 200px;
+    }
+}
