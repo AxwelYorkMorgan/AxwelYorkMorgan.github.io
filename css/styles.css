@@ -48,9 +48,9 @@ body {
     width: 100%;
     content: "";
     display: block;
-    height: 160px;
+    height: 450px;
     position: absolute;
-    top: -25%;
+    top: 35%;
     -webkit-transform: skewY(5deg);
     -moz-transform: skewY(5deg);
     -ms-transform: skewY(5deg);
@@ -62,36 +62,39 @@ body {
 
 .link-container {
     width: 100%;
-    height: 300px;
-    background-color: black;
-    position: absolute;
+    height: 150px;
+    background-color: transparent;
+    position: fixed;
     margin-top: 100%;
     text-align: center;
+    bottom: 0;
 }
 
 span.link-container-sp {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: bold;
     position: absolute;
-    margin-top: 250px;
-    margin-left: -30px;
+    margin-top: 120px;
+    margin-left: -10px;
     opacity: 0.7;
     transition: .5s;
+    z-index: 3;
 }
 
 a.link-container-text {
     text-decoration: none;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24pt;
+    font-size: 20pt;
     font-weight: bold;
     position: absolute;
-    margin-top: 200px;
-    margin-left: -70px;
+    margin-top: 80px;
+    margin-left: -60px;
     opacity: 0.7;
     transition: .5s;
+    z-index: 3;
 }
 
 a.link-container-text:hover {
@@ -114,19 +117,16 @@ a.link-container-text:hover {
 #backshape .wrapper {
     display: block;
     float: left;
-    margin: 700px auto 200px;
+    margin: 500px auto 200px;
     width: 100%;
     padding: 0 5%;
     color: white;
-    transform: skew(0deg, -5deg);
-    -ms-transform: skew(0deg, -10deg);
-    -webkit-transform: skew(0deg, -5deg);
 }
 
 .wp-element {
     text-align: center;
     font-size: 70pt;
-    bottom: 300px;
+    bottom: 15%;
     opacity: 0.8;
     position: absolute;
 }
