@@ -77,7 +77,7 @@ span.link-container-sp {
     font-weight: bold;
     position: absolute;
     margin-top: 120px;
-    margin-left: -10px;
+    margin-left: -60px;
     opacity: 0.7;
     transition: .5s;
     z-index: 3;
@@ -91,7 +91,7 @@ a.link-container-text {
     font-weight: bold;
     position: absolute;
     margin-top: 80px;
-    margin-left: -60px;
+    margin-left: -100px;
     opacity: 0.7;
     transition: .5s;
     z-index: 3;
@@ -121,6 +121,25 @@ a.link-container-text:hover {
     width: 100%;
     padding: 0 5%;
     color: white;
+}
+
+#go-top {
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.3s ease-out;
+}
+
+#go-top.show {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.go-top-position {
+    bottom: 0;
+    margin-left: -47%;
+    margin-bottom: 3%;
+    position: fixed;
+    z-index: 10;
 }
 
 .wp-element {
@@ -155,5 +174,9 @@ a.link-container-text:hover {
     }
     #backshape .wrapper {
         margin: 1000px auto 200px;
+    }
+    .go-top-position {
+        margin-left: -44.5%;
+        margin-bottom: 4%;
     }
 }
