@@ -1,5 +1,6 @@
 $(document).ready(function () {
     let scrollSens = 100;
+    let menuOpen = false;
     
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
@@ -10,7 +11,17 @@ $(document).ready(function () {
     });
 
     $('#open-menu').click(function () {
-        alert("WIP");
+        if(!menuOpen){
+            $('#menu').addClass('show');
+        } else if(menuOpen) {
+            $('#menu').removeClass('show');
+            $('#projectFrame').attr("src","");
+        }
+        menuOpen = !menuOpen;
+    });
+
+    $('.menu-element').click(function () {
+        $('#projectFrame').attr("src","https://axwelyorkmorgan.github.io/" + $(this).val());
     });
 });
 
