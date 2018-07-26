@@ -55,8 +55,8 @@ body {
 
 #menu::before {
     content: '';
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 3999px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4000px;
     z-index: 4;
 }
 
@@ -76,10 +76,20 @@ button.menu-element {
     opacity: 0.8;
     text-decoration: none;
     z-index: 6;
+    transition: opacity 0.1s ease-out; 
 }
 
 button.menu-element:hover {
     opacity: 1;
+}
+
+.projectLabel {
+    color: white;
+    font-size: 54pt;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 10%;
+    z-index: -1;
 }
 
 iframe {
@@ -88,7 +98,12 @@ iframe {
     margin-top: -120px;
     margin-right: 80px;
     float: right;
-    border: none;
+    z-index: 6;
+    border-radius: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: solid rgba(255, 255, 255, 0.45) 5px;
+    border-bottom: solid rgba(255, 255, 255, 0.45) 5px;
 }
 
 .link-container::before {
@@ -173,7 +188,7 @@ a.link-container-text:hover {
 #go-top {
     opacity: 0;
     cursor: default;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out, background 0.3s;
 }
 
 #go-top.show {
@@ -232,5 +247,9 @@ a.link-container-text:hover {
     button.menu-element {
         margin-left: 2%;
         font-size: 22pt;
+    }
+    .projectLabel {
+        margin-left: 45%;
+        margin-top: 12%;
     }
 }
