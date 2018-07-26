@@ -2,7 +2,12 @@ $(document).ready(function () {
     let scrollSens = 100;
     let menuOpen = false;
 
-    $('#loadingScreen').remove();
+    setTimeout(function () {
+        $('#loadingScreen').addClass('fadeOut');
+    }, 500);
+    setTimeout(function () {
+        $('#loadingScreen').remove();
+    }, 1200);
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
@@ -12,10 +17,6 @@ $(document).ready(function () {
         }
     });
 
-    function delayRemove() {
-        $('#menu').removeClass('show');
-    }
-
     $('#open-menu').click(function () {
         if (!menuOpen) {
             $('#menu').removeClass('fadeOut');
@@ -24,7 +25,9 @@ $(document).ready(function () {
         } else if (menuOpen) {
             $('#menu').removeClass('fadeIn');
             $('#menu').addClass('fadeOut');
-            setTimeout(delayRemove, 800);
+            setTimeout(function () {
+                $('#menu').removeClass('show');
+            }, 800);
             $('#projectFrame').attr("src", "");
         }
         menuOpen = !menuOpen;
