@@ -2,6 +2,8 @@ $(document).ready(function () {
     let scrollSens = 100;
     let menuOpen = false;
 
+    $('#loadingScreen').remove();
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
             $('#go-top').addClass('show');

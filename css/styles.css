@@ -4,6 +4,31 @@ body {
     background-size: cover;
 }
 
+#loadingScreen {
+    width: 100%;
+    height: 100%;
+    background-color: #003052;
+    position: fixed;
+    z-index: 9999;
+}
+
+#loadingScreen > #loading {
+    margin-left: 45%;
+    margin-top: 25%;
+    background-color: transparent;
+    position: fixed;
+    z-index: 8;
+}
+/* 
+#loadingScreen > #loadingText {
+    margin-left: 43%;
+    margin-top: 30%;
+    font-size: 40pt;
+    color: white;
+    position: fixed;
+    z-index: 8;
+} */
+
 .navigation-container {
     background-color: transparent;
     position: relative;
