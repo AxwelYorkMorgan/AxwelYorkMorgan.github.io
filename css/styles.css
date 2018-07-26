@@ -56,7 +56,7 @@ body {
 #menu::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 4000px;
+    padding: 3999px;
     z-index: 4;
 }
 

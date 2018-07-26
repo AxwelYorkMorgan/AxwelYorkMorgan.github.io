@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let scrollSens = 100;
     let menuOpen = false;
-    
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
             $('#go-top').addClass('show');
@@ -10,18 +10,26 @@ $(document).ready(function () {
         }
     });
 
+    function delayRemove() {
+        $('#menu').removeClass('show');
+    }
+
     $('#open-menu').click(function () {
-        if(!menuOpen){
+        if (!menuOpen) {
+            $('#menu').removeClass('fadeOut');
             $('#menu').addClass('show');
-        } else if(menuOpen) {
-            $('#menu').removeClass('show');
-            $('#projectFrame').attr("src","");
+            $('#menu').addClass('fadeIn');
+        } else if (menuOpen) {
+            $('#menu').removeClass('fadeIn');
+            $('#menu').addClass('fadeOut');
+            setTimeout(delayRemove, 1000);
+            $('#projectFrame').attr("src", "");
         }
         menuOpen = !menuOpen;
     });
 
     $('.menu-element').click(function () {
-        $('#projectFrame').attr("src","https://axwelyorkmorgan.github.io/" + $(this).val());
+        $('#projectFrame').attr("src", "https://axwelyorkmorgan.github.io/" + $(this).val());
     });
 });
 
