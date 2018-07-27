@@ -20,15 +20,6 @@ body {
     z-index: 8;
     transform: scale(2);
 }
-/* 
-#loadingScreen > #loadingText {
-    margin-left: 43%;
-    margin-top: 30%;
-    font-size: 40pt;
-    color: white;
-    position: fixed;
-    z-index: 8;
-} */
 
 .navigation-container {
     background-color: transparent;
@@ -241,6 +232,28 @@ a.link-container-text:hover {
 @media screen and (max-width: 1280px) {
     body {
         background-size: cover;
+    }
+    #loadingScreen > #loading {
+        margin-left: 45%;
+        margin-top: 80%;
+    }
+    #menu {
+        margin-top: 12%;
+    }
+    button.menu-element {
+        font-size: 28pt;
+        margin-left: 2%;
+    }
+    .projectLabel {
+        width: 100%;
+        font-size: 50pt;
+        margin-left: 20%;
+        margin-top: 50%;
+    }
+    iframe {
+        height: 70%;
+        margin-top: 120px;
+        margin-right: 150px;
     }
     .large-label {
         font-size: 74pt;

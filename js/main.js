@@ -4,10 +4,10 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('#loadingScreen').addClass('fadeOut');
-    }, 500);
+    }, 700);
     setTimeout(function () {
         $('#loadingScreen').remove();
-    }, 1200);
+    }, 1400);
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
