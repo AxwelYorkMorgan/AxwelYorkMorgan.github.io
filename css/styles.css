@@ -21,6 +21,7 @@ body {
     margin-left: 45%;
     margin-top: 25%;
     background-color: transparent;
+    image-rendering: pixelated;
     position: fixed;
     z-index: 8;
     transform: scale(2);
