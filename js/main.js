@@ -4,11 +4,11 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('#loadingScreen').addClass('fadeOut');
-    }, 1000);
+    }, 1150);
     setTimeout(function () {
         $('#loadingScreen').remove();
-        $('#selfBody').removeClass('noscroll');
-    }, 1500);
+        $('#selfBody').removeClass('noScroll');
+    }, 1600);
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollSens) {
@@ -23,25 +23,27 @@ $(document).ready(function () {
             $('#menu').removeClass('fadeOut');
             $('#menu').addClass('show');
             $('#menu').addClass('fadeIn');
+            $('#selfBody').addClass('noScroll');
         } else if (menuOpen) {
             $('#menu').removeClass('fadeIn');
             $('#menu').addClass('fadeOut');
+            $('#selfBody').removeClass('noScroll');
             setTimeout(function () {
                 $('#menu').removeClass('show');
+                $('#projectFrame').attr("src", "");
             }, 800);
-            $('#projectFrame').attr("src", "");
         }
         menuOpen = !menuOpen;
+    });
+
+    $(document).on('click', 'a[href^="#top"]', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
     });
 
     $('.menu-element').click(function () {
         $('#projectFrame').attr("src", "https://axwelyorkmorgan.github.io/" + $(this).val());
     });
-});
-
-$(document).on('click', 'a[href^="#top"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
 });
