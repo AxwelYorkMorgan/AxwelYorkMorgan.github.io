@@ -4,21 +4,42 @@ body {
     background-size: cover;
 }
 
+.noscroll {
+    overflow: hidden;
+}
+
 #loadingScreen {
     width: 100%;
     height: 100%;
     background-color: #003052;
+    background: radial-gradient(circle, #143450, #001c2a);
     position: fixed;
     z-index: 9999;
 }
 
-#loadingScreen > #loading {
+#loadingScreen>#loading {
     margin-left: 45%;
     margin-top: 25%;
     background-color: transparent;
     position: fixed;
     z-index: 8;
     transform: scale(2);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4d82b1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #183f61;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003955;
 }
 
 .navigation-container {
@@ -93,7 +114,7 @@ button.menu-element {
     opacity: 0.8;
     text-decoration: none;
     z-index: 6;
-    transition: opacity 0.1s ease-out; 
+    transition: opacity 0.1s ease-out;
 }
 
 button.menu-element:hover {
@@ -233,7 +254,7 @@ a.link-container-text:hover {
     body {
         background-size: cover;
     }
-    #loadingScreen > #loading {
+    #loadingScreen>#loading {
         margin-left: 45%;
         margin-top: 80%;
     }
