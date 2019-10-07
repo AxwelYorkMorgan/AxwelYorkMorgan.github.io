@@ -44,6 +44,6 @@ $(document).ready(function () {
     });
 
     $('.menu-element').click(function () {
-        $('#projectFrame').attr("src", "https://axwelyorkmorgan.github.io/" + $(this).val());
+        $('#projectFrame').attr("src", "https://philipnorr.github.io/" + $(this).val());
     });
 });
